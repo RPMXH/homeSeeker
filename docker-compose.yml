@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0  # Use the official MySQL image
+    container_name: mysql_db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: listing_database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - mysql_data:/var/lib/mysql  # Persist data
+      - ./listing_database_init.sql:/docker-entrypoint-initdb.d/listing_database_init.sql # Initialize the DB
+
+volumes:
+  mysql_data:

@@ -17,9 +17,21 @@ public class Listing {
     @Id
     private String listingId;
 
-    private char assessment;
+    private Character assessment;
     private String notes;
     private Double price;
     private String listingLink;
     private String source;
+
+    @Override
+    public String toString() {
+        return "Listing{" +
+                "listingId='" + listingId + '\'' +
+                ", assessment=" + assessment +
+                ", notes='" + notes + '\'' +
+                ", price=" + price +
+                ", listingLink='" + listingLink + '\'' +
+                ", source='" + source + '\'' +
+                '}';
+    }
 }

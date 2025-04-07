@@ -1,5 +1,8 @@
 #!/bin/bash
 
+source ./get_olx_curl_data.sh
+source ./get_custojusto_curl_data.sh
+
 strong_echo () {
   local value_to_echo=$1
 
@@ -29,11 +32,14 @@ strong_echo "ZOME"
 strong_echo "IDEALISTA"
 ./get_idealista_curl_data.sh
 
-strong_echo "OLX"
-./get_olx_curl_data.sh
+strong_echo "OLX HOME"
+get_olx_home_curl_data "home" # this can be reused for other articles, not just homes
 
-strong_echo "CUSTO JUSTO"
-./get_custojusto_curl_data.sh
+strong_echo "CUSTO JUSTO HOME"
+get_custojusto_curl_data "home"
+
+strong_echo "OLX TAPETES"
+get_olx_curl_data "tapete"
 
 exit 0
 

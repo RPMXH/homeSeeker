@@ -1,7 +1,6 @@
-/test.sql
+### Jetbrains ###
 
 .idea
 
 ### VS Code ###
 .vscode/
-/fetcher-scripts/curls/*k.txt

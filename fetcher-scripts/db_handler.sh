@@ -5,10 +5,10 @@ upsert_listing () {
   local curl=$4
 
   # Use mysql -e to execute a SQL command.
-  sql_result=$(mysql -h localhost -P 3306 --protocol=tcp listing_database \
-    -e "SELECT * FROM listings WHERE listing_id = '$id';")
+  sql_result_count=$(mysql -h localhost -P 3306 --protocol=tcp listing_database \
+    -e "SELECT * FROM listings WHERE listing_id = '$id';" | wc -l)
 
-  if echo "$sql_result" | grep -q "txt$"; then
+  if [ $sql_result_count -gt 1 ] ; then
     mysql -h localhost -P 3306 --protocol=tcp listing_database \
       -e "UPDATE listings SET price ='$price' WHERE listing_id = '$id';"
 

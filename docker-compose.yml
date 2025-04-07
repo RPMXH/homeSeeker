@@ -1,8 +1,7 @@
-version: '3.8'
 services:
   db:
     image: mysql:8.0  # Use the official MySQL image
-    container_name: mysql_db
+    container_name: mysql_database
     ports:
       - "3306:3306"
     environment:
@@ -11,8 +10,45 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     volumes:
-      - mysql_data:/var/lib/mysql  # Persist data
-      - ./listing_database_init.sql:/docker-entrypoint-initdb.d/listing_database_init.sql # Initialize the DB
+      - db_data:/var/lib/mysql  # Persist data
+      - ./fetcher-scripts/listing_database_init.sql:/docker-entrypoint-initdb.d/listing_database_init.sql # Initialize the DB
+    networks:
+      - app-network
 
+  backend:
+    build:
+      context: ./home-seeker-backend
+      dockerfile: Dockerfile # Assumes multi-stage Java 21 Dockerfile exists
+    container_name: backend
+    restart: unless-stopped
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/listing_database?useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: password
+    ports:
+      # Map host port 8080 to container port 8080 (Spring Boot default)
+      - "8080:8080"
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./home-seeker-frontend
+      dockerfile: Dockerfile # Assumes multi-stage Node/Nginx Dockerfile exists
+    container_name: frontend
+    restart: unless-stopped
+    ports:
+      # Map host port 80 to Nginx default port 80 in the container
+      - "3000:80"
+    networks:
+      - app-network
+
+# ---- Networks ----
+networks:
+  app-network:
+    driver: bridge
+
+# ---- Volumes ----
 volumes:
-  mysql_data:
+  db_data:
+    driver: local

@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import AssessedListingTable from './AssessedListingTable';
-import UnassessedListingTable from './UnassessedListingTable';
-import ActionModal from './ActionModal';
+import AssessedListingTable from './components/AssessedListingTable';
+import UnassessedListingTable from './components/UnassessedListingTable';
+import ActionModal from './components/ActionModal';
 import {
     fetchUnassessedListings,
     fetchInterestedListings,
     fetchNotInterestedListings,
     fetchMaybeListings,
     updateListing
-} from './listingService';
+} from './services/listingService';
 import './App.css';
 
 function App() {
@@ -80,6 +80,20 @@ function App() {
     const handleRejectClick = (listing) => {
         setModalData({ listing: listing, actionType: 'reject' });
         setIsModalOpen(true);
+    };
+
+    // Marks as rejected ('N', notes='just nope') without modal
+    const handleJustNope = async (listing) => {
+        console.log(`App: Handling just nope click for ${listing.listingId}`);
+        setError(null); // Clear previous errors
+        try {
+            await updateListing(listing, 'N', 'just nope'); // Call service directly
+            console.log(`App: Just Nope update successful for ${listing.listingId}. Refreshing data...`);
+            fetchData(); // Refresh data on success
+        } catch (err) {
+            console.error(`App: Error handling Just Nope click for ${listing.listingId}:`, err);
+            setError(`Failed to mark listing ${listing.listingId} as Just Nope: ${err.message}`);
+        }
     };
 
     // Marks as duplicate ('N', notes='duplicado') without modal
@@ -173,6 +187,7 @@ function App() {
                         onApprove={handleApproveClick}
                         onReject={handleRejectClick}
                         onDuplicate={handleDuplicateClick}
+                        onJustNope={handleJustNope}
                         onResetAssessment={handleResetAssessmentClick}
                     />
                 );
@@ -184,6 +199,7 @@ function App() {
                         onApprove={handleApproveClick}
                         onReject={handleRejectClick}
                         onDuplicate={handleDuplicateClick}
+                        onJustNope={handleJustNope}
                         onResetAssessment={handleResetAssessmentClick}
                     />
                 );
@@ -195,6 +211,7 @@ function App() {
                         onApprove={handleApproveClick}
                         onReject={handleRejectClick}
                         onDuplicate={handleDuplicateClick}
+                        onJustNope={handleJustNope}
                         onResetAssessment={handleResetAssessmentClick}
                     />
                 );
@@ -206,6 +223,7 @@ function App() {
                         onApprove={handleApproveClick}
                         onReject={handleRejectClick}
                         onDuplicate={handleDuplicateClick}
+                        onJustNope={handleJustNope}
                         onResetAssessment={handleResetAssessmentClick}
                     />
                 );

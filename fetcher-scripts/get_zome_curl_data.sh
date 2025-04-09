@@ -2,7 +2,7 @@
 
 source ./db_handler.sh
 
-zome_curls=$(ls ./curls/zome*)
+zome_curls=$(ls ./curls/home/zome*)
 # echo $zome_curls
 
 echo "$zome_curls" | while read -r zome_curl; do

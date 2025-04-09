@@ -2,7 +2,7 @@
 
 source ./db_handler.sh
 
-imovirtual_curls=$(ls ./curls/imovirtual*)
+imovirtual_curls=$(ls ./curls/home/imovirtual*)
 # echo $imovirtual_curls
 
 echo "$imovirtual_curls" | while read -r imovirtual_curl; do

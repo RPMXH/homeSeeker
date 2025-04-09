@@ -2,7 +2,7 @@
 
 source ./db_handler.sh
 
-idealista_curls=$(ls ./curls/idealista*)
+idealista_curls=$(ls ./curls/home/idealista*)
 # echo $idealista_curls
 
 echo "$idealista_curls" | while read -r idealista_curl; do

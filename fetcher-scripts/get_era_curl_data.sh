@@ -2,7 +2,7 @@
 
 source ./db_handler.sh
 
-era_curls=$(ls ./curls/era*)
+era_curls=$(ls ./curls/home/era*)
 # echo $era_curls
 
 echo "$era_curls" | while read -r era_curl; do

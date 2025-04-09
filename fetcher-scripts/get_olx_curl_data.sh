@@ -36,7 +36,7 @@ get_olx_home_curl_data(){
         # Crucially, we use printf %q to properly escape the URL for use in the SQL statement, preventing SQL injection.
         escaped_url=$(printf %q "$url")
 
-        upsert_listing "$article-olx-$id" $price "https://www.olx.pt$escaped_url" "$olx_curl"
+        upsert_listing "$article-olx-$id" $price "$escaped_url" "$olx_curl"
 
       done
   done

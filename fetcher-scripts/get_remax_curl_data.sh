@@ -2,7 +2,7 @@
 
 source ./db_handler.sh
 
-remax_curls=$(ls ./curls/remax*)
+remax_curls=$(ls ./curls/home/remax*)
 # echo $remax_curls
 
 echo "$remax_curls" | while read -r remax_curl; do

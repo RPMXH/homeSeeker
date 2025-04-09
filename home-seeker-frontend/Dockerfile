@@ -7,7 +7,7 @@ WORKDIR /app
 
 COPY package*.json ./
 # Use npm ci for cleaner, faster, reproducible installs
-RUN npm ci
+RUN npm install
 
 COPY . .
 # Execute the build script (e.g., "build": "react-scripts build" or "vite build")

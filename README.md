@@ -1,19 +1,43 @@
 # Home Seeker
 
-Algorithm to find and assess listings (originally for homes)
+Algorithm to find and assess listings (originally for homes, but extensible to other categories).
 
-## Underlying principle, and how does it achieve the objective
+## Supported Sources
 
-* The algorithm performs curl requests, scrapes the response, and stores listings in a database as unassessed listings.
-    * Running the algorithm again will only add new records to the database, and update the prices of active listings.
-* Then, at any time, by querying the database for unassessed records, and reviewing and assess each listing, as either
-  interesting or not
-    * The frontend makes the assessment effort much more user-friendly.
+* Real Estate - Portugal:
+  * ERA
+  * Remax
+  * Zome
+  * Idealista
+  * OLX
+  * Imovirtual
+  * CustoJusto
+
+* Other Products:
+  * OLX
+  * CustoJusto
+
+## Underlying Principle
+
+1.  **Data Fetching:** Shell scripts (`fetcher-scripts/`) execute `curl` requests based on saved files, scrape the HTML/JSON responses, and store/update listing details (ID, price, link, source) in a MySQL database. Listings are initially marked as unassessed.
+2.  **Assessment:** A separate frontend application (running on `localhost:3000`) allows users to efficiently review unassessed listings from the database and mark them as interesting or not interesting.
 
 The curls requests which are executed by the algorithm must be:
 
 * manually extracted from the browser, and
 * added to the correct directory
+
+## Dependencies
+
+The core fetching logic relies on common command-line tools:
+
+*   `curl`: For making HTTP requests.
+*   `jq`: For parsing JSON responses.
+*   `pup`: For parsing HTML responses. (Install via package manager, e.g., `brew install pup`)
+*   `mysql-client`: For interacting with the database.
+*   Standard Unix tools (`bash`, `cat`, `ls`, `sed`, `tr`, `awk`, etc.)
+
+*Note: The Docker setup handles these dependencies automatically when running the full application.*
 
 ## Steps to run Algorithm
 

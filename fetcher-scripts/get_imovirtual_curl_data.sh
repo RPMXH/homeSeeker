@@ -14,6 +14,10 @@ extract_listing_id() {
   # ${id%%\?*} removes the shortest match of '?*' from the end of the string
   id="${id%%\?*}"
 
+  # If the resulting ID ends with a double quote, remove it
+  # ${id%"\""} removes the shortest match of '"' from the end of the string
+  id="${id%\"}"
+
   echo "$id"
 }
 

@@ -38,11 +38,11 @@ get_olx_home_curl_data "home" # this can be reused for other articles, not just 
 strong_echo "CUSTO JUSTO HOME"
 get_custojusto_curl_data "home"
 
-strong_echo "OLX TAPETE"
-get_olx_curl_data "tapete"
+strong_echo "OLX OTHERS"
+get_olx_curl_data "others"
 
-strong_echo "CUSTO JUSTO TAPETE"
-get_custojusto_curl_data "tapete"
+strong_echo "CUSTO JUSTO OTHERS"
+get_custojusto_curl_data "others"
 
 exit 0
 

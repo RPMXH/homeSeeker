@@ -15,6 +15,27 @@ services:
     networks:
       - app-network
 
+  fetcher:
+    # Build the image from the Dockerfile in the fetcher-scripts directory
+    build:
+      context: ./fetcher-scripts
+    # Depends on the db service to ensure the database is ready first
+    depends_on:
+      - db
+    environment:
+      # Pass database credentials as environment variables
+      # This is much better than hardcoding them in scripts
+      MYSQL_HOST: db
+      MYSQL_DATABASE: listing_database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      # Mount the local 'curls' directory into the container.
+      # You can now add/edit curl files on your machine and the container will see them!
+      - ./fetcher-scripts/curls:/app/curls
+    networks:
+      - app-network
+
   backend:
     build:
       context: ./home-seeker-backend

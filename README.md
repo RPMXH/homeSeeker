@@ -1,7 +1,5 @@
 # Home Seeker
 
-# Home Seeker
-
 An application to find, fetch, and assess online listings. Originally built for real estate, but designed to be extensible for other categories.
 
 ## The Workflow

@@ -16,6 +16,7 @@ services:
       - app-network
 
   fetcher:
+    container_name: listing_fetcher
     # Build the image from the Dockerfile in the fetcher-scripts directory
     build:
       context: ./fetcher-scripts

@@ -5,7 +5,7 @@
 ## Home
 
 ### ERA
-
+![Alt Text](./sources/era_720.gif)
 ---
 ### Remax
 

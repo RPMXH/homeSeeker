@@ -17,6 +17,8 @@ echo "#############################"
 echo "##### GET ALL CURL DATA #####"
 echo "#############################"
 
+# HOME
+
 strong_echo "REMAX"
 ./get_remax_curl_data.sh
 
@@ -32,17 +34,16 @@ strong_echo "ZOME"
 strong_echo "IDEALISTA"
 ./get_idealista_curl_data.sh
 
-strong_echo "OLX - HOME"
-get_olx_home_curl_data "home" # this can be reused for other articles, not just homes
-
 strong_echo "CUSTO JUSTO - HOME"
 get_custojusto_curl_data "home"
 
+# ITEMS
+
 strong_echo "OLX - ITEMS"
-get_olx_curl_data "others"
+get_olx_curl_data "items"
 
 strong_echo "CUSTO JUSTO - ITEMS"
-get_custojusto_curl_data "others"
+get_custojusto_curl_data "items"
 
 exit 0
 

@@ -8,11 +8,15 @@ Each supported source has a textual explanation of the request that should be co
 
 ### ERA
 
-* The request to be copied is _"**Search**"_ .
+* The request to be copied is named _"**Search**"_ .
 
-![Alt Text](./resources/era_720.gif)
+![era network request selection](./resources/era_720.gif)
 
 ### Remax
+
+* The request to be copied is named _"**PaginatedMultiMatchSearch**"_ or _"**PaginatedMultiMatchSearchWithGeoHash**"_ .
+
+![remax network request selection](./resources/remax_720.gif)
 
 ### Zome
 

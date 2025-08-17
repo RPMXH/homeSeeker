@@ -73,7 +73,7 @@ For each listing, you have several options:
 *   **Identify as Duplicate:** Click this to mark the listing as a duplicate. It will be moved to the "Not Interested" tab.
 *   **Reassess:** This button allows you to undo an assessment. If you click it on a listing in the "Interested" or "Not Interested" tabs, the listing will be moved back to the main "Unassessed" tab. (Note: Clicking this on an already unassessed listing has no effect).
 
-![Alt Text](./resources/frontend_720.gif)
+![actions on the unassessed listings tabs](./resources/frontend_720.gif)
 
 ### Reviewing Your Assessments
 
@@ -82,7 +82,7 @@ There are two additional tabs to help you review your choices:
 *   **Interested Tab:** Contains all the listings you have approved. You can see the price, link, and the justification you provided for each one.
 *   **Not Interested Tab:** Contains all listings you have marked as not interested, discarded, or identified as a duplicate. The justifications are also visible here.
 
-![Alt Text](./resources/assessed_720.gif)
+![actions on the assessed listings tabs](./resources/assessed_720.gif)
 
 Currently, there are no filtering or sorting options within these two tabs.
 

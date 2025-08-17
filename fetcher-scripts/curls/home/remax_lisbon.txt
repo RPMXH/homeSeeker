@@ -1,0 +1,21 @@
+curl 'https://remax.pt/api/Listing/PaginatedMultiMatchSearch' \
+  -H 'accept: application/json, text/plain, */*' \
+  -H 'accept-language: en-GB,en;q=0.7' \
+  -H 'cache-control: no-cache' \
+  -H 'cacheable_request_offline: true' \
+  -H 'content-type: application/json' \
+  -H 'languageid: 9' \
+  -H 'origin: https://remax.pt' \
+  -H 'pragma: no-cache' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://remax.pt/pt/comprar/imoveis/habitacao/lisboa/lisboa/r/t2?s=%7B%22rg%22%3A%22Lisboa%22%7D&p=1&o=-PublishDate' \
+  -H 'sec-ch-ua: "Brave";v="131", "Chromium";v="131", "Not_A Brand";v="24"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-gpc: 1' \
+  -H 'tenantid: 7' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36' \
+  --data-raw '{"filters":[{"field":"businessTypeID","operationType":"int","operator":"=","value":"1","label":"buy"},{"field":"Region2ID","operationType":"string","operator":"=","value":"537"},{"field":"numberOfBedrooms","operationType":"int","operator":"Range","value":"2;"},{"field":"listingClassID","operationType":"int","operator":"=","value":"1"},{"field":"isSpecialExclusive","operator":"=","operationType":"string","value":"false"}],"pageNumber":1,"pageSize":20,"sort":["-PublishDate"],"searchValue":"Lisboa"}'

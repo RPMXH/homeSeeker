@@ -52,6 +52,11 @@ Each supported source has a textual explanation of the request that should be co
 
 ### OLX
 
+* The request type is **HTML/Doc** .
+* The request should be the only one in the **Doc** tab .
+
+![olx items network request selection](./resources/olx_items_720.gif)
+
 ### CustoJusto (Items)
 
 For items, obtaining the search request should be exactly the same as for the [Home](#custojusto-home) section

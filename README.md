@@ -72,6 +72,8 @@ For each listing, you have several options:
 *   **Discard:** This is a quick way to mark a listing as "not interested" *without* needing to provide a justification. It will also be moved to the "Not Interested" tab.
 *   **Identify as Duplicate:** Click this to mark the listing as a duplicate. It will be moved to the "Not Interested" tab.
 *   **Reassess:** This button allows you to undo an assessment. If you click it on a listing in the "Interested" or "Not Interested" tabs, the listing will be moved back to the main "Unassessed" tab. (Note: Clicking this on an already unassessed listing has no effect).
+* 
+![Alt Text](./resources/frontend_720.gif)
 
 ### Reviewing Your Assessments
 

@@ -1,8 +1,12 @@
 # Home Seeker
 
+<a href='https://ko-fi.com/W7W71CM5G1' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 Tired of juggling browser tabs and spreadsheets to track interesting listings across multiple websites? Home Seeker automates the discovery process, consolidates listings into a single interface, and provides a powerful workflow to assess them, ensuring you never lose track of a potential deal.
 
 An application to find, fetch, and assess online listings. Originally built for real estate, but designed to be extensible for other categories.
+
+---
 
 ## The Workflow
 
@@ -10,8 +14,6 @@ The project operates in two main phases:
 
 1.  **Data Fetching (The `fetcher` service):** A containerized set of shell scripts executes `curl` requests that you provide. It scrapes the resulting data and saves new or updated listings to a MySQL database.
 2.  **Assessment (The `frontend` service):** A web application reads from the database and provides a simple UI to let you review the fetched listings, marking them as "interesting" or "not interesting".
-
----
 
 ## How to Use - **Data Fetching**
 
@@ -48,6 +50,7 @@ docker compose up fetcher
 ```
 
 ---
+
 ## How to Use - **Assessment**
 
 Once you have fetched some listings, you can begin the assessment process using the web interface.
@@ -87,6 +90,8 @@ There are two additional tabs to help you review your choices:
 
 Currently, there are no filtering or sorting options within these two tabs.
 
+---
+
 ## Contributing: Adding a New Scraper
 
 The system is designed to be easily extended. If you wish to add a scraper for a new source, follow these steps:
@@ -96,3 +101,11 @@ The system is designed to be easily extended. If you wish to add a scraper for a
   2.  **Use the Database Handler:** Your script should source and use `db_handler.sh` to interact with the database, specifically the `upsert_listing` function.
   3.  **Update the Orchestrator:** Add a call to your new script within `get_all_curl_data.sh`.
   4.  **Document:** Add the new source to the "Supported Sources" list in this README.
+
+---
+
+## Donate
+
+<a href='https://ko-fi.com/W7W71CM5G1' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+![qr code to rpmxh kofi](resources/rpmxh-kofi.png)

@@ -1,5 +1,7 @@
 # Home Seeker
 
+Tired of juggling browser tabs and spreadsheets to track interesting listings across multiple websites? Home Seeker automates the discovery process, consolidates listings into a single interface, and provides a powerful workflow to assess them, ensuring you never lose track of a potential deal.
+
 An application to find, fetch, and assess online listings. Originally built for real estate, but designed to be extensible for other categories.
 
 ## The Workflow
@@ -79,3 +81,13 @@ There are two additional tabs to help you review your choices:
 *   **Not Interested Tab:** Contains all listings you have marked as not interested, discarded, or identified as a duplicate. The justifications are also visible here.
 
 Currently, there are no filtering or sorting options within these two tabs.
+
+## Contributing: Adding a New Scraper
+
+The system is designed to be easily extended. If you wish to add a scraper for a new source, follow these steps:
+
+* Open a pull-request with the following criteria:
+  1.  **Create the Script:** In the `fetcher-scripts/` directory, create a new script named `get_<new_source>_curl_data.sh`. Use the existing scripts as a template for parsing the HTML/JSON response and calling the database handler.
+  2.  **Use the Database Handler:** Your script should source and use `db_handler.sh` to interact with the database, specifically the `upsert_listing` function.
+  3.  **Update the Orchestrator:** Add a call to your new script within `get_all_curl_data.sh`.
+  4.  **Document:** Add the new source to the "Supported Sources" list in this README.

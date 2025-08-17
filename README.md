@@ -47,8 +47,6 @@ docker compose up fetcher
 
 ## How to Use - **Assessment**
 
-## How to Use - **Assessment**
-
 Once you have fetched some listings, you can begin the assessment process using the web interface.
 
 1.  In your browser, navigate to `http://localhost:3000`.

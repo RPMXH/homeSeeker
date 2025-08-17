@@ -47,6 +47,7 @@ To execute the fetching scripts, run the fetcher service on its own:
 docker compose up fetcher
 ```
 
+---
 ## How to Use - **Assessment**
 
 Once you have fetched some listings, you can begin the assessment process using the web interface.

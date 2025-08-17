@@ -56,7 +56,10 @@ Once you have fetched some listings, you can begin the assessment process using 
 
 This is the default view, showing all the listings that the `fetcher` has found, but you haven't reviewed yet.
 
-*   **Display:** Each listing shows its source (e.g., Idealista, Remax), the listed price, and a direct link to view the listing on its original website.
+Each listing shows:
+* its source (e.g., Idealista, Remax),
+* the listed price, and
+* a direct link to view the listing on its original website.
 
 ### Taking Action on a Listing
 

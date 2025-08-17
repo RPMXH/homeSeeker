@@ -36,11 +36,14 @@ The power of this tool comes from the searches you want it to perform.
    * Paste the copied curl command into this file.
    * Example path: fetcher-scripts/curls/home/idealista_t2_lisbon.txt
 
+   
+### Step 3: Run the Fetcher
 
+To execute the fetching scripts, run the fetcher service on its own:
 
-### Run algorithm
-#### Algorithm running (in command line)
-In the fetcher-scripts directory, run the command 'get_all_curl_data.sh'
+``` shell
+docker compose up fetcher
+```
 
 ## Assessing listings (using the frontend)
 

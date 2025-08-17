@@ -8,23 +8,31 @@ Each supported source has a textual explanation of the request that should be co
 
 ### ERA
 
-* The request to be copied is named _"**Search**"_ .
+* The request type is **Fetch/XHR** .
+* The request is named _"**Search**"_ .
 
 ![era network request selection](./resources/era_720.gif)
 
 ### Remax
 
-* The request to be copied is named _"**get_angariacoes**"_ .
+* The request type is **Fetch/XHR** 
+* The request is named _"**PaginatedMultiMatchSearch**"_ or _"**PaginatedMultiMatchSearchWithGeoHash**"_ .
 
 ![remax network request selection](./resources/remax_720.gif)
 
 ### Zome
 
-* The request to be copied is named _"**PaginatedMultiMatchSearch**"_ or _"**PaginatedMultiMatchSearchWithGeoHash**"_ .
+* The request type is **Fetch/XHR** .
+* The request is named _"**get_angariacoes**"_ .
 
 ![zome network request selection](./resources/zome_720.gif)
 
 ### Idealista
+
+* The request type is **HTML/Doc** .
+* The request should be the only one in the **Doc** tab .
+
+![idealista network request selection](./resources/idealista_720.gif)
 
 ### Imovirtual
 

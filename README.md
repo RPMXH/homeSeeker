@@ -11,7 +11,7 @@ The project operates in two main phases:
 
 ---
 
-## How to Use
+## How to Use - **Data Fetching**
 
 ### Step 1: Initial Setup
 
@@ -45,7 +45,36 @@ To execute the fetching scripts, run the fetcher service on its own:
 docker compose up fetcher
 ```
 
-## Assessing listings (using the frontend)
+## How to Use - **Assessment**
 
-In a browser, open a new tab on 'localhost:3000'
-Start assessing according to THIS video
+## How to Use - **Assessment**
+
+Once you have fetched some listings, you can begin the assessment process using the web interface.
+
+1.  In your browser, navigate to `http://localhost:3000`.
+2.  You will land on the main **Unassessed Listings** tab.
+
+### The Unassessed Listings Tab
+
+This is the default view, showing all the listings that the `fetcher` has found, but you haven't reviewed yet.
+
+*   **Display:** Each listing shows its source (e.g., Idealista, Remax), the listed price, and a direct link to view the listing on its original website.
+
+### Taking Action on a Listing
+
+For each listing, you have several options:
+
+*   **Approve (Mark as Interested):** Click this to move the listing to the "Interested" tab. A text box will appear, allowing you to add a note or justification for why you're interested.
+*   **Reject (Mark as Not Interested):** This moves the listing to the "Not Interested" tab. A text box will appear for you to add a justification (e.g., "bad location," "overpriced").
+*   **Discard:** This is a quick way to mark a listing as "not interested" *without* needing to provide a justification. It will also be moved to the "Not Interested" tab.
+*   **Identify as Duplicate:** Click this to mark the listing as a duplicate. It will be moved to the "Not Interested" tab.
+*   **Reassess:** This button allows you to undo an assessment. If you click it on a listing in the "Interested" or "Not Interested" tabs, the listing will be moved back to the main "Unassessed" tab. (Note: Clicking this on an already unassessed listing has no effect).
+
+### Reviewing Your Assessments
+
+There are two additional tabs to help you review your choices:
+
+*   **Interested Tab:** Contains all the listings you have approved. You can see the price, link, and the justification you provided for each one.
+*   **Not Interested Tab:** Contains all listings you have marked as not interested, discarded, or identified as a duplicate. The justifications are also visible here.
+
+Currently, there are no filtering or sorting options within these two tabs.

@@ -36,7 +36,17 @@ Each supported source has a textual explanation of the request that should be co
 
 ### Imovirtual
 
+* The request type is **HTML/Doc** .
+* The request should be the only one in the **Doc** tab .
+
+![imovirtual network request selection](./resources/imovirtual_720.gif)
+
 ### CustoJusto
+
+* The request type is **HTML/Doc** .
+* The request should be the only one in the **Doc** tab .
+
+![custo justo network request selection](./resources/custojusto_720.gif)
 
 ## Items:
 

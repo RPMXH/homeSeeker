@@ -41,7 +41,7 @@ Each supported source has a textual explanation of the request that should be co
 
 ![imovirtual network request selection](./resources/imovirtual_720.gif)
 
-### CustoJusto
+### CustoJusto (Home)
 
 * The request type is **HTML/Doc** .
 * The request should be the only one in the **Doc** tab .
@@ -52,4 +52,11 @@ Each supported source has a textual explanation of the request that should be co
 
 ### OLX
 
-### CustoJusto
+### CustoJusto (Items)
+
+For items, obtaining the search request should be exactly the same as for the [Home](#custojusto-home) section
+
+* The request type is **HTML/Doc** .
+* The request should be the only one in the **Doc** tab .
+
+![custo justo network request selection](./resources/custojusto_720.gif)

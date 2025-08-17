@@ -14,11 +14,15 @@ Each supported source has a textual explanation of the request that should be co
 
 ### Remax
 
-* The request to be copied is named _"**PaginatedMultiMatchSearch**"_ or _"**PaginatedMultiMatchSearchWithGeoHash**"_ .
+* The request to be copied is named _"**get_angariacoes**"_ .
 
 ![remax network request selection](./resources/remax_720.gif)
 
 ### Zome
+
+* The request to be copied is named _"**PaginatedMultiMatchSearch**"_ or _"**PaginatedMultiMatchSearchWithGeoHash**"_ .
+
+![zome network request selection](./resources/zome_720.gif)
 
 ### Idealista
 
